@@ -13,7 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
-
+import { RegisterComponent } from './pages/register/register.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 
 @NgModule({
@@ -23,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    RegisterComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

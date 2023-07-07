@@ -1,0 +1,28 @@
+:host {
+  .profile {
+    margin-bottom: 4em;
+    display: grid;
+    grid-template-columns: 67px 1fr;
+    column-gap: 15px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px;
+
+    &__image {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    &__info {
+      h1 {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+    }
+  }
+}
