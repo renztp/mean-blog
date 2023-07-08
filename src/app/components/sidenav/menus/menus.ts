@@ -1,8 +1,5 @@
-export interface Menus {
-  items: MenuLink[];
-}
-
-interface MenuLink {
+export interface MenuLink {
+  order?: number;
   label: string;
   url: string;
   slug: string;

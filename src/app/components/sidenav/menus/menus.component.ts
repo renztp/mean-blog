@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Menus } from './menus';
+import { MenuLink } from './menus';
 
 @Component({
   selector: 'app-menus',
@@ -7,16 +7,29 @@ import { Menus } from './menus';
   styleUrls: ['./menus.component.scss']
 })
 export class MenusComponent {
-  menuLinks: Menus;
+  menuLinks: MenuLink[];
   constructor() {
-    this.menuLinks = {
-      items: [
-        {
-          label: 'Posts',
-          url: '/posts',
-          slug: 'posts'
-        }
-      ]
-    };
+    this.menuLinks = [
+      {
+        label: 'Posts',
+        url: '/posts',
+        slug: 'posts'
+      },
+      {
+        label: 'Menus',
+        url: '/menus',
+        slug: 'menus'
+      },
+      {
+        label: 'Global',
+        url: '/global',
+        slug: 'global'
+      },
+      {
+        label: 'Settings',
+        url: '/settings',
+        slug: 'settings'
+      },
+    ];
   }
 }

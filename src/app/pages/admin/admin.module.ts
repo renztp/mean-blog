@@ -8,7 +8,7 @@ import { SidenavComponent } from '../../components/sidenav/sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MenusComponent } from '../../components/sidenav/menus/menus.component';
 import { NotfoundComponent } from '../notfound/notfound.component';
-import { Route } from '@models/routes';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { Route } from '@models/routes';
     DashboardComponent,
     AdminComponent,
     SidenavComponent,
-    MenusComponent
+    MenusComponent,
+    PostsComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +28,11 @@ import { Route } from '@models/routes';
         component: AdminComponent,
         children: [
           { path: 'dashboard', component: DashboardComponent },
-          { path: 'create', component: CreatePostComponent },
+          {
+            path: 'posts', component: PostsComponent, children: [
+              { path: 'create', component: CreatePostComponent },
+            ]
+          },
           { path: '**', component: NotfoundComponent }
         ]
       }
